@@ -9,10 +9,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="../StronaCV/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../StronaCV/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../StronaCV/images/favicon-16x16.png">
-    <link rel="manifest" href="../StronaCV/images/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -175,10 +175,29 @@
 
     <section class="contact">
 
+        <h1>Skontaktuj się ze mną</h1>
+        <div>
+            <form action="form/send.php" method="post" id="contactform">
+                <fieldset>
+                    <input type="text" name="contact_name" placeholder="Imię i nazwisko" required="required"
+                        tabindex="1" />
+                    <input type="email" name="contact_email" placeholder="Adres e-mail" required="required"
+                        tabindex="2" />
+                    <textarea rows="5" columns="10" name="contact_body" placeholder="Treść wiadomości"
+                        required="required" tabindex="3"></textarea>
+                    <input type="submit" value="Wyślij wiadomość" class="sendBtn" tabindex="5" />
+                    <p>Podaj wynik: <span class="form_check_1"></span>
+                        &times; <span class="form_check_2"></span> = <input type="text" name="contact_check"
+                            maxlength="2" tabindex="4" /></p>
+                    <input type="hidden" name="contact_check_data" value="" />
+                </fieldset>
+            </form>
+        </div>
+
         <!-- dodać działanie formularza -->
 
-        <h1>Skontaktuj się ze mną</h1>
-        <div class="wrap clearfix" id="send_form_status">
+
+        <!-- <div class="wrap clearfix" id="send_form_status">
 
             <form method="post" action="send_form.php" id="contact_form">
                 <div><input type="text" name="name" id="name" class="formField" placeholder="Twoje imię"></div>
@@ -186,18 +205,19 @@
                 <div><textarea name="message" id="message" class="formField" placeholder="Twoja wiadomość"></textarea>
                 </div>
                 <div><button id="sendBtn">Wyślij wiadomość</button></div>
-            </form>
-            <div class="socials">
-                <div class="social clearfix"><img src="images/contact1.png" alt="kontakt"><span>mpanek1@op.pl</span>
-                </div>
-                <div class="social clearfix"><img src="images/contact2.png" alt="kontakt"><span>+48 883 134 488</span>
-                </div>
-                <div class="social clearfix"><img src="images/contact5.png" alt="kontakt"><span>michalpanek92</span>
-                </div>
-
+            </form> 
+        </div>-->
+        <div class="socials">
+            <div class="social clearfix"><img src="images/contact1.png" alt="kontakt"><span>mpanek1@op.pl</span>
+            </div>
+            <div class="social clearfix"><img src="images/contact2.png" alt="kontakt"><span>+48 883 134 488</span>
+            </div>
+            <div class="social clearfix"><img src="images/contact5.png" alt="kontakt"><span>michalpanek92</span>
             </div>
 
         </div>
+
+
     </section>
 
     <footer>&copy; Michał Panek</footer>

@@ -452,7 +452,7 @@ header button:hover {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
     color: white;
     text-align: center;
     margin-top: 20px;
@@ -501,7 +501,7 @@ header button:hover {
 }
 
 .contact .social {
-    padding: 10px 0;
+    padding: 20px 0;
     color: white;
     font-family: 'Raleway', sans-serif;
     display: block;
@@ -541,6 +541,25 @@ header button:hover {
     color: #F00
 }
 
+.sendBtn {
+    background-color: #000;
+    color: white;
+}
+
+.sendBtn:hover {
+    background-color: #fff;
+    color: black;
+    border: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.contact p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
 
 
 /* Stopka */

@@ -1,3 +1,13 @@
+$(document)
+    .on('click', '#btnMe', function (e) {
+        e.preventDefault();
+        var x = $(window).height() + $(window).scrollTop();
+        $('html, body')
+            .animate({
+                scrollTop: x
+            }, 'slow', 'swing', function () {});
+    });
+
 $(function () {
     var check_1 = (Math.floor(Math.random() * 9) + 1).toString(),
         check_2 = (Math.floor(Math.random() * 9) + 1).toString(),

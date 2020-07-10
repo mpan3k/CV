@@ -9,76 +9,77 @@ font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
+
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
 
+
+/* HEADER */
+
 header {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: stretch;
     background-color: #29a6dc;
-    height: 100vh;
-    overflow: hidden;
     max-width: 1920px;
-    margin: 0 auto;
-}
-
-header>* {
-    position: absolute;
-}
-
-header div.img {
-    float: left;
-    height: 100vh;
-    right: 0;
-    left: 45vw;
-    background-image: url(../images/photo.jpeg);
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
 
 header div.welcome {
-    z-index: 1;
-    top: 10%;
-    left: 10%;
-    font-family: 'Oswald',
-        sans-serif;
+    padding: 6% 5%;
+    font-family: 'Oswald', sans-serif;
     color: white;
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
-
 }
 
-header p {
+
+header img {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+header div.welcome p {
     font-size: 100px;
     transform: translateX(-200%);
     animation: header 1s both;
 }
 
 
-header h1 {
-    margin-top: 25px;
+header div.welcome h1 {
+    margin-top: 6%;
     font-size: 42px;
     transform: translateX(-200%);
     animation: header 1s .2s both;
 }
 
-header h2 {
+header div.welcome h2 {
     font-size: 40px;
     font-weight: normal;
     transform: translateX(-200%);
     animation: header 1s .3s both;
 }
 
-header button {
-    margin-top: 110px;
+header div.welcome button {
+    margin-top: 25%;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     line-height: 32px;
-    padding: 20px 20px;
+    padding: 3% 3%;
     text-transform: uppercase;
     color: white;
     background-color: transparent;
@@ -88,7 +89,7 @@ header button {
     animation: header 1s .5s both;
 }
 
-header button:hover {
+header div.welcome button:hover {
     background-color: #fff;
     color: #29a6dc;
 }
@@ -99,12 +100,27 @@ header button:hover {
     }
 }
 
+@media (min-width: 1920px) {
+    header div.welcome {
+        width: 40%;
+    }
+
+    header img {
+        transform: scale(0.9);
+        top: 0;
+        right: 0;
+    }
+}
 
 
-/* Sekcja 1 - o mnie */
+
+/* Sekcja 1 - O MNIE */
 
 
 .me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1600px;
     padding: 2%;
     text-align: center;
@@ -121,7 +137,7 @@ header button:hover {
     min-width: 600px;
     text-align: center;
     width: 80vw;
-    padding: 0 30px;
+    padding: 0 5%;
     margin: 0 auto;
     border-left: black 2px solid;
     border-right: black 2px solid;
@@ -136,7 +152,7 @@ header button:hover {
 }
 
 
-/* Sekcja umiejętności */
+/* Sekcja 2 - UMIEJĘTNOŚCI */
 
 .skills {
     max-width: 1600px;
@@ -167,7 +183,7 @@ header button:hover {
 }
 
 
-/* Sekcja języki */
+/* Sekcja 3 - JĘZYKI */
 
 .languages {
     max-width: 1600px;
@@ -195,10 +211,12 @@ header button:hover {
 }
 
 
-/* Sekcja hobby*/
+/* Sekcja 4 - HOBBY */
 
 
 .hobby {
+    width: 100%;
+    float: left;
     max-width: 1920px;
     margin: 0;
 }
@@ -289,92 +307,154 @@ header button:hover {
 
 }
 
-/* Sekcja edukacja */
+/* Sekcja 5 - EDUKACJA */
 
-.education {
+.schools {
     float: left;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 0 30px;
     width: 100%;
-    height: 50vh;
+
 }
 
-.education h1 {
-    text-align: center;
-    text-transform: uppercase;
+.schools h1 {
     font-size: 36px;
     font-family: 'Oswald', sans-serif;
-    padding: 20px 0;
-}
-
-.education ul {
-    top: 0;
-    left: 0;
-    list-style: none;
-    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
     color: black;
+    text-align: center;
+    padding: 30px 20px;
 }
 
-.education ul>li {
-    box-sizing: border-box;
+/* .schools .web img {
+    width: 100%;
+    height: 50vh;
+  } */
+
+.schools .school {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    padding: 20px 20px 20px 0;
+    text-align: center;
+    height: 30vh;
+}
+
+.schools .school h2 {
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    padding-bottom: 14px;
+    /* text-indent: 20px; */
+}
+
+.schools .school p {
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.schools .education {
     top: 0;
     left: 0;
+    float: left;
     width: 50%;
-    padding: 0 30px;
+    max-width: 1600px;
+    background-color: #29a6dc;
 }
 
-.education ul>li:nth-child(1) {
-    text-align: right;
-    border-right: black solid 4px;
-    padding-left: 80px;
-    padding-bottom: 400px;
-    background-image: url(../images/ka.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 400px;
-    background-position-y: 120px;
-    background-size: 300px;
-
+.schools .education:nth-of-type(odd) {
+    background-color: #ff4f2c;
 }
 
-.education ul>li:nth-last-of-type(1) {
-    transform: translate(100%, -100%);
-    text-align: left;
-    padding-right: 80px;
-    padding-bottom: 200px;
-    /* height: 300px; */
-    background-image: url(../images/zse2.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 60px;
-    background-position-y: 100px;
-    background-size: 150px;
-}
+/* .schools .education:nth-of-type(even) {
+    background-color: #29a6dc;
+} */
 
-.education ul>li h2 {
-    font-size: 22px;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
 
-.education ul>li h3 h4 {
-    font-size: 14px;
+
+
+/* Sekcja 6 - DOŚWIADCZENIE */
+
+.experiences {
+    float: left;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 0 30px;
+    width: 100%;
 
 }
 
+.experiences h1 {
+    font-size: 36px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+}
 
+/* .experiences .web img {
+    width: 100%;
+    height: 50vh;
+  } */
 
+.experiences .work {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    padding: 20px 20px 20px 0;
+    text-align: center;
+    height: 30vh;
+}
 
-/* Sekcja experience */
+.experiences .work h2 {
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    padding-bottom: 14px;
+    /* text-indent: 20px; */
+}
 
+.experiences .work p {
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.experiences .experience {
+    top: 0;
+    left: 0;
+    float: left;
+    width: 50%;
+    max-width: 1600px;
+    background-color: #29a6dc;
+}
+
+.experiences .experience:nth-of-type(odd) {
+    background-color: #ff4f2c;
+}
+
+/* .schools .education:nth-of-type(even) {
+    background-color: #29a6dc;
+} */
 
 /* ZROBIĆ SEKCJE TAK JAK W STARYM PROJEKCIE */
 
 
-.experience {
+/* .experiences {
     margin-top: 15%;
-    height: 100vh;
+    height: 50vh;
     float: left;
-    width: 100%;
+    width: 50%;
 }
 
-.experience h1 {
+.experiences h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
@@ -382,7 +462,7 @@ header button:hover {
     padding: 20px;
 }
 
-.experience ul {
+.experiences ul {
     top: 0;
     left: 0;
     list-style: none;
@@ -390,7 +470,7 @@ header button:hover {
     color: black;
 }
 
-.experience ul>li {
+.experiences ul>li {
     box-sizing: border-box;
     top: 0;
     left: 0;
@@ -398,11 +478,11 @@ header button:hover {
     padding: 0 30px;
 }
 
-.experience ul>li:nth-child(1) {
+.experiences ul>li:nth-child(1) {
     text-align: right;
     border-right: black solid 4px;
-    /* transform: translate(0, 20%); */
-    /* height: 50vh; */
+    transform: translate(0, 20%);
+    height: 50vh;
     padding-left: 80px;
     padding-bottom: 400px;
     background-image: url(../images/arcpol.jpg);
@@ -413,12 +493,12 @@ header button:hover {
 
 }
 
-.experience ul>li:nth-last-of-type(1) {
+.experiences ul>li:nth-last-of-type(1) {
     transform: translate(100%, -110%);
     text-align: left;
     padding-right: 80px;
     padding-bottom: 100px;
-    /* height: 300px; */
+    height: 300px;
     background-image: url(../images/maspex.jpg);
     background-repeat: no-repeat;
     background-position-x: 60px;
@@ -426,23 +506,26 @@ header button:hover {
     background-size: 300px;
 }
 
-.experience ul>li h2 {
+.experiences ul>li h2 {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 20px;
 }
 
-.experience ul>li h3 h4 p {
+.experiences ul>li h3 h4 p {
     font-size: 14px;
 
-}
+} */
 
 
 
 /* Sekcja contact */
 
 .contact {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* float: left; */
     width: 100%;
     background-color: #000;
     padding: 30px 30px;
@@ -564,7 +647,10 @@ fieldset {
 /* Stopka */
 
 footer {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* float: left; */
     width: 100%;
     background-color: #29a6dc;
     color: white;

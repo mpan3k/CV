@@ -355,6 +355,12 @@ header div.welcome button:hover {
     margin: 0 1%;
     max-width: 1600px;
     background-color: #29a6dc;
+    transition: .4s;
+}
+
+.education:hover,
+.work:hover {
+    background-color: #1f31d1;
 }
 
 .education h2,

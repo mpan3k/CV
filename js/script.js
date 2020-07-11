@@ -8,47 +8,48 @@ $(document)
             }, 'slow', 'swing', function () {});
     });
 
-$(function () {
-    var check_1 = (Math.floor(Math.random() * 9) + 1).toString(),
-        check_2 = (Math.floor(Math.random() * 9) + 1).toString(),
-        check = check_1 + check_2;
+window.addEventListener("DOMContentLoaded", function () {
 
-    $('#contactform span.form_check_1').text(check_1);
-    $('#contactform span.form_check_2').text(check_2);
-    $('#contactform input[name="contact_check_data"]').val(check);
+    // get the form elements defined in your form HTML above
 
-    var sending = false;
-    $('#contactform').on('submit', function (e) {
-        var $form = $(this),
-            $submit = $('input[type="submit"]', $form);
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
 
-        e.preventDefault();
+    // Success and Error functions for after the form is submitted
 
-        if (sending) {
-            return false;
-        }
+    function success() {
+        form.reset();
+        button.style = "display: none ";
+        status.innerHTML = "Dzięki!";
+    }
 
-        $('.form-error', $form).remove();
+    function error() {
+        status.innerHTML = "Ups! Nie udało się wysłac wiadomości.";
+    }
 
-        $('input, textarea', $form).prop('readonly', true);
-        $submit.val('Wysyłam…');
-        sending = true;
+    // handle the form submission event
 
-        $.post($form.attr('action'), $form.serialize(), function (data) {
-            if (data === 'ok') {
-                $form.slideUp('fast', function () {
-                    $form.after('<div class="form-success">Wiadomość została wysłana! Skontaktujemy się z Tobą jak tylko to będzie możliwe.</div>');
-                });
-
-                return true;
-            }
-
-            $form.prepend('<div class="form-error">Wystąpił błąd podczas wysyłania formularza. Upewnij się, że wypełniłeś wszystkie pola i poprawnie rozwiązałeś działanie.</div>');
-            $('input, textarea', $form).prop('readonly', false);
-            $submit.val('Wyślij wiadomość');
-            sending = false;
-
-            return false;
-        }, 'text');
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
     });
 });
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+        } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+        }
+    };
+    xhr.send(data);
+}

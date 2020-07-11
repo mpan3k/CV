@@ -51,8 +51,6 @@ header img {
 }
 
 
-
-
 header div.welcome p {
     font-size: 100px;
     transform: translateX(-200%);
@@ -118,12 +116,11 @@ header div.welcome button:hover {
 
 
 .me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    float: left;
     max-width: 1600px;
     padding: 2%;
     text-align: center;
+    background-color: #fff;
 }
 
 .me h1 {
@@ -136,7 +133,7 @@ header div.welcome button:hover {
 .wrap {
     min-width: 600px;
     text-align: center;
-    width: 80vw;
+    width: 90%;
     padding: 0 5%;
     margin: 0 auto;
     border-left: black 2px solid;
@@ -155,9 +152,13 @@ header div.welcome button:hover {
 /* Sekcja 2 - UMIEJĘTNOŚCI */
 
 .skills {
+    float: left;
     max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
     padding: 2%;
     text-align: center;
+    background-color: #fff;
 }
 
 .skills h1 {
@@ -186,10 +187,14 @@ header div.welcome button:hover {
 /* Sekcja 3 - JĘZYKI */
 
 .languages {
+    float: left;
+    width: 100%;
     max-width: 1600px;
     padding: 2%;
+    margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
+    background-color: #fff;
 }
 
 .languages h1 {
@@ -219,10 +224,11 @@ header div.welcome button:hover {
     float: left;
     max-width: 1920px;
     margin: 0;
+    background-color: #fff;
 }
 
 .hobby .item {
-    height: 25vh;
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -307,350 +313,257 @@ header div.welcome button:hover {
 
 }
 
-/* Sekcja 5 - EDUKACJA */
+/* Sekcja 5 - EDUKACJA I DOŚWIADCZENIE */
 
-.schools {
+.past {
     float: left;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     background-color: white;
-    padding: 10px 0 30px;
+    padding: 10px 0;
     width: 100%;
-
 }
 
-.schools h1 {
+
+.past h1 {
+    float: left;
+    width: 100%;
     font-size: 36px;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: black;
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px;
 }
 
-/* .schools .web img {
-    width: 100%;
-    height: 50vh;
-  } */
+.past h1:nth-last-of-type(1) {
+    float: left;
+    padding-top: 20px;
+}
 
-.schools .school {
+.education,
+.work {
+    top: 0;
+    left: 0;
+    float: left;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-weight: normal;
-    padding: 20px 20px 20px 0;
     text-align: center;
-    height: 30vh;
+    height: 250px;
+    width: 48%;
+    margin: 0 1%;
+    max-width: 1600px;
+    background-color: #29a6dc;
 }
 
-.schools .school h2 {
+.education h2,
+.work h2 {
     text-align: center;
     font-size: 18px;
     border-bottom: 2px solid white;
-    padding-bottom: 14px;
-    /* text-indent: 20px; */
+    padding: 20px;
 }
 
-.schools .school p {
+.education h3,
+.work h3 {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.education p,
+.work p {
     text-align: center;
     font-size: 12px;
     padding: 20px;
 }
 
-.schools .education {
-    top: 0;
-    left: 0;
-    float: left;
-    width: 50%;
-    max-width: 1600px;
-    background-color: #29a6dc;
-}
-
-.schools .education:nth-of-type(odd) {
-    background-color: #ff4f2c;
-}
-
-/* .schools .education:nth-of-type(even) {
-    background-color: #29a6dc;
-} */
 
 
 
-
-/* Sekcja 6 - DOŚWIADCZENIE */
-
-.experiences {
-    float: left;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    background-color: white;
-    padding: 10px 0 30px;
-    width: 100%;
-
-}
-
-.experiences h1 {
-    font-size: 36px;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    color: black;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-/* .experiences .web img {
-    width: 100%;
-    height: 50vh;
-  } */
-
-.experiences .work {
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-weight: normal;
-    padding: 20px 20px 20px 0;
-    text-align: center;
-    height: 30vh;
-}
-
-.experiences .work h2 {
-    text-align: center;
-    font-size: 18px;
-    border-bottom: 2px solid white;
-    padding-bottom: 14px;
-    /* text-indent: 20px; */
-}
-
-.experiences .work p {
-    text-align: center;
-    font-size: 12px;
-    padding: 20px;
-}
-
-.experiences .experience {
-    top: 0;
-    left: 0;
-    float: left;
-    width: 50%;
-    max-width: 1600px;
-    background-color: #29a6dc;
-}
-
-.experiences .experience:nth-of-type(odd) {
-    background-color: #ff4f2c;
-}
-
-/* .schools .education:nth-of-type(even) {
-    background-color: #29a6dc;
-} */
-
-/* ZROBIĆ SEKCJE TAK JAK W STARYM PROJEKCIE */
-
-
-/* .experiences {
-    margin-top: 15%;
-    height: 50vh;
-    float: left;
-    width: 50%;
-}
-
-.experiences h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 36px;
-    font-family: 'Oswald', sans-serif;
-    padding: 20px;
-}
-
-.experiences ul {
-    top: 0;
-    left: 0;
-    list-style: none;
-    font-family: 'Raleway', sans-serif;
-    color: black;
-}
-
-.experiences ul>li {
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.experiences ul>li:nth-child(1) {
-    text-align: right;
-    border-right: black solid 4px;
-    transform: translate(0, 20%);
-    height: 50vh;
-    padding-left: 80px;
-    padding-bottom: 400px;
-    background-image: url(../images/arcpol.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 400px;
-    background-position-y: 220px;
-    background-size: 300px;
-
-}
-
-.experiences ul>li:nth-last-of-type(1) {
-    transform: translate(100%, -110%);
-    text-align: left;
-    padding-right: 80px;
-    padding-bottom: 100px;
-    height: 300px;
-    background-image: url(../images/maspex.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 60px;
-    background-position-y: 170px;
-    background-size: 300px;
-}
-
-.experiences ul>li h2 {
-    font-size: 22px;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
-
-.experiences ul>li h3 h4 p {
-    font-size: 14px;
-
-} */
-
-
-
-/* Sekcja contact */
+/* Sekcja 6 - KONTAKT */
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* float: left; */
+    float: left;
     width: 100%;
     background-color: #000;
-    padding: 30px 30px;
+    padding-top: 10px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .contact h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     color: white;
     text-align: center;
     margin-top: 20px;
 }
 
-.contact .wrap {
-    padding-top: 20px;
-    min-width: 1024px;
-    margin: 0 auto;
+.contactWrap {
+    display: flex;
 }
 
-.contact input,
-.contact button,
-.contact textarea {
+#my-form {
+    width: 40%;
+    margin-left: 80px;
+}
+
+#my-form input,
+#my-form button,
+textarea {
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+
+#textarea {
+    float: left;
     font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    padding: 5px;
+    height: 250px;
+    padding: 10px;
 }
 
-.contact input {
-    height: 46px;
-    font-size: 20px;
-
+#my-form>input {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 8px;
+    padding: 10px;
 }
 
-.contact textarea {
-    height: 180px;
-    font-size: 20px;
-}
-
-.contact button {
+#my-form button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    line-height: 44px;
     background-color: black;
     color: white;
     border: 2px solid white;
-    font-size: 20px;
-    line-height: 50px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 2px;
     transition: .3s;
     cursor: pointer;
+
 }
 
-.contact .socials {
+#my-form button:hover {
+    color: black;
+    background-color: #fff;
+}
+
+#my-form p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    line-height: 44px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    transform: translateY(-20px);
+}
+
+
+.socials {
+    float: left;
     padding-top: 30px;
-    font-size: 0;
+    font-size: 20px;
+    width: 50%;
 }
 
-.contact .social {
+.social {
     padding: 20px 0;
     color: white;
     font-family: 'Raleway', sans-serif;
     display: block;
     width: 50%;
     margin: 0 auto;
+    font-size: 55px;
 }
 
-.contact .social img {
+.social img {
     float: left;
+    width: 100px;
 
 }
 
-.contact .social span {
+.social span {
     line-height: 72px;
     padding-left: 20px;
-    float: left;
-    font-size: 20px;
+    font-size: 30px;
 }
 
-.contact form,
-.contact .socials {
-    float: left;
-    width: 50%;
-    padding: 0 5px
+/* @media (min-width: 533px) {
+    .contact .social {
+        display: inline-block;
+        width: 50%;
+    }
 }
 
-.contact button:hover {
-    color: black;
-    background-color: #fff;
-}
+@media (min-width: 1024px) {
 
-.status_ok {
-    color: #060
-}
+    .contact h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
 
-.status_err {
-    color: #F00
-}
+    .contact form,
+    .contact .socials {
+        float: left;
+        width: 50%;
+        padding: 0 20px
+    }
 
-.sendBtn {
-    background-color: #000;
-    color: white;
-}
+    .contact .social {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
 
-.sendBtn:hover {
-    background-color: #fff;
-    color: black;
-    border: none;
-}
+    .contact input,
+    .contact button,
+    .contact textarea {
+        margin-bottom: 35px;
 
-fieldset {
-    border: none;
-}
+    }
 
-.contact p {
-    color: white;
-    font-family: 'Raleway', sans-serif;
-}
+    .contact input {
+
+        height: 46px;
+        font-size: 24px;
+
+    }
+
+    .contact textarea {
+        height: 180px;
+        font-size: 24px;
+    }
+
+    .contact button {
+        font-size: 20px;
+        line-height: 50px;
+        transition: .3s;
+        cursor: pointer;
+
+    }
+
+    .contact button:hover {
+        color: black;
+        background-color: #fff;
+    }
+} */
 
 /* Stopka */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* float: left; */
+    float: left;
     width: 100%;
     background-color: #29a6dc;
     color: white;

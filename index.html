@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link href="css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -37,28 +38,36 @@
     <section class="me clearfix">
         <h1>O mnie</h1>
         <div class="wrap">
-            <p>Jak Państwo zapewne zauważyli - do tej pory nie miałem doświadczenia jako programista. Od zawsze lubiłem
+            <p>Jak pewnie zauważyłeś/aś - do tej pory nie miałem doświadczenia jako programista. Od zawsze lubiłem
                 spędzać czas przed komputerem, niekoniecznie przy grach. Prowadziłem bloga, zakładałem kiedyś własną
                 stronę internetową, lubiłem "buszować" w systemie. Los jednak chciał, że podążyłem ścieżką handlowca. Po
-                latach, mimo bardzo dobrych wyników i posiadania statusu cenionego Przedstawiciela Handlowego, zaczęło
+                latach, mimo bardzo dobrych wyników i posiadania statusu cenionego przedstawiciela handlowego, zaczęło
                 sprawiać mi to coraz mniejszą satysfakcję i radość z pracy, dlatego zacząłem uczyć się czegoś
-                nowego. Czegoś, co wiem, że będzie sprawiało mi przyjemność i po głębszym zastanowieniu zadecydowałem,
+                nowego. Czegoś, co już wiem, że sprawia mi przyjemność i po głębszym zastanowieniu zadecydowałem,
                 że idę w to! Chcę być programistą!</p>
             <p>
-                Nie powiem, że jestem w tym ekspertem, ciągle się uczę, z tygodnia na tydzień poszerzam swoją wiedzę. To
-                jednak tylko teoria. Potrzebuję kogoś, kto pomoże mi w przejściu przez ten najcięższy okres wdrażania
-                się do pracy jako programista.
+                Zdaję sobie sprawę, że jestem dopiero na początku tej drogi. Ciągle się uczę, z tygodnia na tydzień
+                poszerzam zakres swojej wiedzy. Czytam specjalistyczne książki, uczestniczę w kursach, tworzę własne
+                projekty, które sukcesywnie będę umieszczał zarówno tutaj, jak i na platformie GitHub. Od kilku miesięcy
+                każdą wolną chwilę spędzam przy pisaniu kodu i na razie może nie jest on jeszcze doskonały, ale nawet
+                sam zauważam postępy, które robię z dnia na dzień.
             </p>
             <p>
                 Docelowo obrałem sobie ścieżkę front-end developera, ponieważ uważam, że mam dość duży zmysł estetyczny,
                 czasami jestem wręcz pedantyczny, co na pewno może być przydatne w tej dziedzinie. Moje umiejętności
-                związane z HTML, CSS, JavaScript ciągle rosną i prawdopodobnie są już większe niż w momencie, gdy czyta
-                Pan/i tę stronę.
+                związane z HTML, CSS, JavaScript ciągle rosną i prawdopodobnie są już większe niż w momencie, kiedy
+                czytasz tę stronę.
             </p>
             <p>
-                Jestem lojalny i nigdy nie palę za sobą mostów. Potrafię pracować w zespole, wiem jak działają zarówno
-                wielkie korporacje, jak i małe firmy. Jestem nastawiony na sukces i rozwój osobisty. Mam bardzo duże
-                poczucie humoru oraz dystans do siebie i optymistycznie podchodzę do codzienności.
+                Jaki jestem? Jestem lojalny i nigdy nie palę za sobą mostów. Jeśli obiorę sobie jakiś cel, to nie
+                spocznę, dopóki go nie zrealizuję. Nieustępliwy, ambitny, dokładny - te trzy cechy charakteryzują mnie
+                najlepiej. Bardzo dobrze potrafię pracować w zespole. Jestem hybrydą humanisty i umysłu ścisłego. Dzięki
+                kierunkowi dziennikarskiemu potrafię doskonale komunikować się i odczytywać oczekiwania innych. Za to
+                technikum elektroniczne nauczyło mnie logicznego i analitycznego myślenia, umiejętności rozwiązywania
+                problemów oraz kreatywności.
+                Wiem jak działają zarówno wielkie korporacje, jak i małe firmy. Jestem nastawiony na sukces i rozwój
+                osobisty. Mam bardzo duże poczucie humoru oraz dystans do siebie i optymistycznie podchodzę do
+                codzienności.
             </p>
         </div>
     </section>
@@ -104,6 +113,7 @@
         </div>
     </section>
 
+
     <!-- SEKCJA JĘZYKI -->
 
     <section class="languages">
@@ -118,6 +128,15 @@
                     class="far fa-star"></i></span><span><i class="far fa-star"></i></span><span><i
                     class="far fa-star"></i></span></p>
     </section>
+
+
+    <!-- SEKCJA CERTYFIKATY -->
+    <section class="certyficates">
+        <h1>Certyfikaty</h1>
+        <a href="images/certyfikat1.jpg" data-lightbox="certyfikat1" data-title="Web developer od podstaw w
+        15 dni"><img src="images/certyfikat1.jpg" alt="certyfikat web dev"></a>
+    </section>
+
 
     <!-- SEKCJA HOBBY -->
 
@@ -145,6 +164,7 @@
             <h2>Krakowska Akademia im. Andrzeja Frycza Modrzewskiego</h2>
             <h3>2013.10 - 2017.07</h3>
             <p>Studia licencjackie, Dziennikarstwo i komunikacja społeczna</p>
+            <p><i>Public Relations</i></p>
         </div>
         <div class="education clearfix">
             <h2>Zespół Szkół Elektrycznych nr 2 w Krakowie</h2>
@@ -195,11 +215,15 @@
             </form>
 
             <div class="socials clearfix">
-                <div class="social clearfix"><img src="images/contact1.png" alt="kontakt"><span>mpanek1@op.pl</span>
-                </div>
+                <div class="social clearfix"><a href="mailto:mpanek1@op.pl"><img src="images/contact1.png"
+                            alt="kontakt"><span>mpanek1@op.pl</span></a></div>
                 <div class="social clearfix"><img src="images/contact2.png" alt="kontakt"><span>+48 883 134 488</span>
                 </div>
-                <div class="social clearfix"><img src="images/contact5.png" alt="kontakt"><span>michalpanek92</span>
+                <div class="social clearfix"><a href="https://www.linkedin.com/in/michalpanek92/"><img
+                            src="images/contact5.png" alt="kontakt"><span>michalpanek92</span></a>
+                </div>
+                <div class="social clearfix"><a href="https://github.com/mpan3k?tab=repositories"><img class="github"
+                            src="images/github.png" alt="kontakt"><span>github.com/mpan3k</span></a>
                 </div>
             </div>
         </div>
@@ -209,8 +233,8 @@
     <footer class="clearfix">&copy; Michał Panek</footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>

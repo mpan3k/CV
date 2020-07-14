@@ -19,11 +19,12 @@ font-family: 'Raleway', sans-serif;
 h1 {
     float: left;
     width: 100%;
+    margin-bottom: 20px;
+    margin-top: 35px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-    margin-bottom: 25px;
     color: #000;
 }
 
@@ -31,71 +32,73 @@ h1 {
 /* HEADER */
 
 header {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    align-items: stretch;
-    background-color: #29a6dc;
-    max-width: 1920px;
-    overflow: hidden;
+    float: left;
     width: 100%;
-    flex-wrap: nowrap;
-    position: relative;
+    height: 100vh;
+    max-width: 1920px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background-color: #29a6dc;
 }
 
 
 header div.welcome {
+    float: left;
+    min-width: 40%;
     padding: 6% 5%;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-weight: bold;
     text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
+    color: #fff;
 }
 
 
 header img {
     position: absolute;
-    height: 100vh;
     top: 0;
     right: 0;
+    height: 100vh;
 }
 
 
 header div.welcome p {
-    font-size: 100px;
     transform: translateX(-200%);
+    font-size: 100px;
     animation: header 1s both;
 }
 
 
 header div.welcome h1 {
     margin-top: 6%;
-    font-size: 42px;
+    margin-bottom: 0;
     transform: translateX(-200%);
-    animation: header 1s .2s both;
+    text-align: left;
+    font-size: 42px;
     color: #fff;
+    animation: header 1s .2s both;
 }
 
 header div.welcome h2 {
+    transform: translateX(-200%);
     font-size: 40px;
     font-weight: normal;
-    transform: translateX(-200%);
+    color: #fff;
     animation: header 1s .3s both;
 }
 
 header div.welcome button {
-    margin-top: 25%;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    line-height: 32px;
     padding: 3% 3%;
-    text-transform: uppercase;
-    color: white;
-    background-color: transparent;
-    font-size: 22px;
+    margin-top: 25%;
     border: 3px solid white;
     transform: translateX(-200%);
+    line-height: 32px;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
     animation: header 1s .5s both;
 }
 
@@ -123,39 +126,33 @@ header div.welcome button:hover {
 }
 
 
-
 /* Sekcja 1 - O MNIE */
-
 
 .me {
     float: left;
     max-width: 1600px;
-    padding: 2%;
+    padding: 0 2%;
     text-align: center;
     background-color: #fff;
 }
 
-/* .me h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 36px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-} */
-
-.wrap {
+.meWrap {
     min-width: 600px;
-    text-align: center;
     width: 90%;
     padding: 0 5%;
     margin: 0 auto;
     border-left: black 2px solid;
     border-right: black 2px solid;
     line-height: 5vh;
+    text-align: center;
+}
+
+.me h1 {
+    margin-top: 0;
 }
 
 .me p {
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 1.1;
     margin-bottom: 10px;
     color: #000;
 }
@@ -168,23 +165,20 @@ header div.welcome button:hover {
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    padding: 2%;
+    padding: 0 2%;
     text-align: center;
     background-color: #fff;
 }
 
-/* .skills h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 36px;
-    text-transform: uppercase;
-} */
+.skills h1 {
+    margin-top: 15px;
+}
 
 .skills p {
+    padding: 0 30px 10px 30px;
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    padding: 10px 30px;
-    margin-top: 15px;
 }
 
 .skills p span {
@@ -202,10 +196,9 @@ header div.welcome button:hover {
     float: left;
     width: 100%;
     max-width: 1600px;
-    padding: 2%;
-    margin: 0 auto;
+    padding: 0 2%;
     text-align: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     background-color: #fff;
 }
 
@@ -219,8 +212,8 @@ header div.welcome button:hover {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    padding: 10px 30px;
-    margin-top: 15px;
+    padding: 0 30px;
+    /* margin-top: 15px; */
 }
 
 .languages p span {
@@ -233,7 +226,7 @@ header div.welcome button:hover {
     float: left;
     width: 100%;
     max-width: 1600px;
-    padding: 2%;
+    padding: 0 2%;
     text-align: center;
     background-color: #fff;
 }
@@ -377,7 +370,7 @@ header div.welcome button:hover {
 
 .past h1:nth-last-of-type(1) {
     float: left;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 .education,
@@ -404,23 +397,23 @@ header div.welcome button:hover {
 .education h2,
 .work h2 {
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
     border-bottom: 2px solid white;
-    padding: 20px;
+    padding: 16px;
 }
 
 .education h3,
 .work h3 {
     text-align: center;
     font-size: 18px;
-    padding: 20px;
+    padding: 16px;
 }
 
 .education p,
 .work p {
     text-align: center;
-    font-size: 12px;
-    padding: 20px;
+    font-size: 14px;
+    padding: 16px;
 }
 
 
@@ -432,19 +425,13 @@ header div.welcome button:hover {
     float: left;
     width: 100%;
     background-color: #000;
-    padding-top: 10px;
+    padding-top: 0;
     max-width: 1600px;
     margin: 0 auto;
 }
 
 .contact h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 36px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
     color: white;
-    text-align: center;
-    margin-top: 20px;
 }
 
 .contactWrap {
@@ -567,8 +554,8 @@ textarea {
 @media (min-width: 1024px) {
 
     .contact h1 {
-        font-size: 60px;
-        padding: 30px 0;
+        font-size: 50px;
+        padding-bottom: 10px;
     }
 
     .contact form,

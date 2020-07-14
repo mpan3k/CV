@@ -16,6 +16,17 @@ font-family: 'Raleway', sans-serif;
     clear: both;
 }
 
+h1 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #000;
+}
+
 
 /* HEADER */
 
@@ -63,6 +74,7 @@ header div.welcome h1 {
     font-size: 42px;
     transform: translateX(-200%);
     animation: header 1s .2s both;
+    color: #fff;
 }
 
 header div.welcome h2 {
@@ -123,12 +135,12 @@ header div.welcome button:hover {
     background-color: #fff;
 }
 
-.me h1 {
+/* .me h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 25px;
-}
+} */
 
 .wrap {
     min-width: 600px;
@@ -161,11 +173,11 @@ header div.welcome button:hover {
     background-color: #fff;
 }
 
-.skills h1 {
+/* .skills h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-}
+} */
 
 .skills p {
     display: inline-block;
@@ -197,11 +209,11 @@ header div.welcome button:hover {
     background-color: #fff;
 }
 
-.languages h1 {
+/* .languages h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-}
+} */
 
 .languages p {
     display: inline-block;
@@ -226,13 +238,13 @@ header div.welcome button:hover {
     background-color: #fff;
 }
 
-.certyficates h1 {
+/* .certyficates h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 25px;
     text-align: center;
-}
+} */
 
 .certyficates img {
     margin: 0 auto;
@@ -286,13 +298,13 @@ header div.welcome button:hover {
     padding: 5px 0;
 }
 
-.hobby h1 {
+/* .hobby h1 {
     font-family: 'Oswald', sans-serif;
     padding: 20px;
     text-align: center;
     font-size: 36px;
     text-transform: uppercase;
-}
+} */
 
 @media (min-width:533px) {
     .hobby .item {
@@ -352,7 +364,7 @@ header div.welcome button:hover {
 }
 
 
-.past h1 {
+/* .past h1 {
     float: left;
     width: 100%;
     font-size: 36px;
@@ -361,7 +373,7 @@ header div.welcome button:hover {
     color: black;
     text-align: center;
     padding: 20px;
-}
+} */
 
 .past h1:nth-last-of-type(1) {
     float: left;
@@ -436,11 +448,12 @@ header div.welcome button:hover {
 }
 
 .contactWrap {
-    display: flex;
+    float: left;
+    width: 100%;
 }
 
 #my-form {
-    width: 40%;
+    width: 45%;
     margin-left: 80px;
 }
 
@@ -507,7 +520,7 @@ textarea {
     float: left;
     padding-top: 30px;
     font-size: 20px;
-    width: 50%;
+    width: 45%;
 }
 
 .social {
@@ -515,7 +528,7 @@ textarea {
     color: white;
     font-family: 'Raleway', sans-serif;
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -561,13 +574,13 @@ textarea {
     .contact form,
     .contact .socials {
         float: left;
-        width: 50%;
+        width: 45%;
         padding: 0 20px
     }
 
     .contact .social {
         display: block;
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
     }
 
